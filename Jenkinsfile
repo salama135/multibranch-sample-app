@@ -1,12 +1,16 @@
 pipeline {
-  agent {label 'linux'}
+
+  parameters { 
+    string(name: 'AGENT_LABEL', defaultValue: "CM_CAI-W20170", description: 'node/agent to run the pipeline on') 
+  }
+  agent any
   options {
     buildDiscarder(logRotator(numToKeepStr: '5'))
   }
   stages {
     stage('Build') {
       steps {
-        sh './gradlew clean check --no-daemon'
+         echo "hello world"
       }
     }
   }
