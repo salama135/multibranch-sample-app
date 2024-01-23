@@ -6,7 +6,7 @@ pipeline {
   stages {
     stage('Run') {
       steps {
-        python mian.py 
+        python main.py 
       }
     }
   }
