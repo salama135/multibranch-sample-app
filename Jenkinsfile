@@ -1,9 +1,9 @@
 pipeline {
 
   parameters { 
-    string(name: 'AGENT_LABEL', defaultValue: 'CM_CAI-W20170', description: 'node/agent to run the pipeline on') 
+    string(name: 'AGENT_LABEL', defaultValue: CM_CAI-W20170, description: 'node/agent to run the pipeline on') 
   }
-    agent {label "${AGENT_LABEL}"}
+    agent {label any}
   options {
     buildDiscarder(logRotator(numToKeepStr: '5'))
   }
