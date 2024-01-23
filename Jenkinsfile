@@ -10,7 +10,9 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-         echo "hello world"
+         echo "env ${env}"
+        
+        
       }
     }
   }
