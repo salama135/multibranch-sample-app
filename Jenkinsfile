@@ -6,7 +6,8 @@ pipeline {
   stages {
     stage('Run') {
       steps {
-        python main.py 
+        bat "cmd /c echo hello"
+        bat "cmd /c python main.py" 
       }
     }
   }
