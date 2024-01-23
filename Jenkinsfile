@@ -9,10 +9,13 @@ pipeline {
   }
   stages {
     stage('Build') {
+      when {
+        branch "fix-*"
+      }
       steps {
-         echo "env ${env}"
         
-        
+         echo "hello from fix-*"
+
       }
     }
   }
