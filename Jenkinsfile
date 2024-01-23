@@ -4,9 +4,9 @@ pipeline {
     buildDiscarder(logRotator(numToKeepStr: '5'))
   }
   stages {
-    stage('Build') {
+    stage('Run') {
       steps {
-        sh './gradlew clean check --no-daemon'
+        python mian.py 
       }
     }
   }
